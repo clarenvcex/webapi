@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<style>
+body, html {height: 100%}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+.menu {display: none}
+.bgimg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("/w3images/pizza.jpg");
+    min-height: 90%;
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+{{>navbar}}
+
+<div class="jumbotron text-center">
+  <h1>Search Page</h1>
+  <p>For searching places of interest</p>
+</div>
+
+<div class="row container text-center">
+  <div class="col-sm-12">
+    <form id="form" action="/" method="post">
+      <div class="form-group">
+        <label for="addr">Enter address:</label>
+        <input id="addr" name="address" class="form-control" type="text" placeholder="Enter your prefered area.."/>
+        <p></p>
+        <label for="name">Enter name:</label>
+        <input id="name" name="name" class="form-control" type="text" placeholder="Enter name.."/>
+        <p></p>
+        <label for="places-type">Select type of place:</label>
+        <p></p>
+          <select id="places-type" name="placetype" class="form-control">
+            {{> scrollablelist}}
+          </select>
+        <p></p>
+        <input type="submit" value="Send" formaction="/getplaces"/>
+      </div>
+    </form>
+  </div>
+</div>
+
+<footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+
+
+
+</body>
+</html>
