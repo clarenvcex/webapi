@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>Pet </title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -20,3 +20,25 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
 
 <!-- Navbar (sit on top) -->
 {{>navbar}}
+
+<div class="w3-container w3-padding-64 w3-blue w3-grayscale w3-xlarge" id="about">
+  <h1>Historical Searches</h1>
+  <p>Previous Search Results</p>
+</div>
+
+<div class="w3-container w3-padding-64 w3-purple w3-grayscale w3-xlarge" id="about">
+  <form action="/" method="post">
+    <button class="btn btn-primary btn-lg" type="submit" formaction="/delete">Delete all records</button>
+  </form>
+  <br>
+  <table class="table table-striped">
+    {{#list items}}<tr><td>{{name}}</td><td>{{address}}</td><td><img src={{photo_reference}} width="200" height="200"></td></tr>{{/list}}
+  </table>
+</div>
+
+<footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+</body>
+</html>
