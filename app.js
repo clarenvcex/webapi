@@ -22,7 +22,7 @@ var filteredResults;
 hbs.registerHelper('list',(items,options)=>{
   items = filteredResults;
   var out ="<tr><th>Name</th>,<th>Address</th>,<th>Photos</th></tr>";
-  
+
   const length = items.length;
 
   for(var i=0;i<length;i++){
@@ -122,7 +122,7 @@ if(originalResults[i].photos){
   tempObj={
     name: originalResults[i].name,
     address:originalResults[i].vicinity,
-    photo_reference:'/no_image_found.png',
+    photo_reference:'/noImageFound.jpg',
 
 
   }

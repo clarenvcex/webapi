@@ -13,9 +13,19 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
 .bgimg {
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("/w3images/pizza.jpg");
+    background-image: url("/dog and cat.jpg");
     min-height: 90%;
 }
+h1{
+  text-align: center;
+  font-size : 100px
+}
+p{
+  text-align: center;
+  font-size : 40px
+}
+
+
 </style>
 <body>
 
@@ -28,8 +38,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
 </div>
 
 <div class="row container-fluid">
-  <table class="table table-striped">
-    {{#list items}}<tr><td>{{name}}</td><td>{{address}}</td><td><img src={{photo_reference}} width="200" height="200"></td></tr>{{/list}}
+  <table class="w3-table-all w3-hoverable">
+    {{#list items}}<tr><td>{{name}}</td><td>{{address}}</td><td><img src={{photo_reference}} width="250" height="250"></td></tr>{{/list}}
   </table>
 </div>
 
