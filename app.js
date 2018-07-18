@@ -37,7 +37,7 @@ server.get ('/form',(req,res)=>{
   res.render('form.hbs');
 });
 
-server.get ('/',(req,res)=>{
+server.get ('/home',(req,res)=>{
   res.render('home.hbs');
 });
 
